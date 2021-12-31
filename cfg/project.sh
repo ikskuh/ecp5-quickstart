@@ -1,0 +1,2 @@
+TOP=top
+TARGET_FREQ=160
