@@ -40,15 +40,3 @@ EOF
   vvp "build/${fname}.vvp" 
 
 done
-
-exit 0
-
-
-  # echo "read -sv $file" > build/testbench.s
-  # echo "read -sv src/*.v" >> build/testbench.s
-  # echo "prep -top ${testbench}" >> build/testbench.s
-  # echo "sim -clock clk -resetn rst -a -vcd build/tests/${fname%.v}.vcd" >> build/testbench.s
-# 
-  # yosys -q -s build/testbench.s
-# 
-  # rm build/testbench.s
