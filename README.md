@@ -28,17 +28,25 @@ exec docker run \
   /bin/bash
 ```
 
+Start the script in your project folder to get into a shell in your current working directory. This shell will run inside the container to give you access to the synthesis and simulation toolchain.
+
 ## Usage
 
 ### `./build.sh`
+
+**NOTE:** Use in the docker container.
 
 Will perform synthesis, place and route and will render the bitstream. It will use all files in `src` for this. Configure the `top` module in `cfg/project.sh`.
 
 ### `./prog.sh`
 
+**NOTE:** Use on your host.
+
 Will program the previously created synthesized bitstream.
 
 ### `./test.sh`
+
+**NOTE:** Use in the docker container.
 
 Will run each testbench in `tests`. The testbenches must be named as the file + `_testbench` and will each get a `clk` and `rst` input. The `clk` will tick every time step, so a delay of one clock period is `#2`. `rst` will be LOW for two ticks.
 
